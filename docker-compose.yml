@@ -1,0 +1,15 @@
+version: '3.7'
+
+services: 
+  wordpress: 
+    image: wordpress:php7.1
+    ports:
+      - 8080:80
+    environment:
+      WORDPRESS_DB_PASSWORD: 59,,minion
+    volumes:
+      - ./BotaPressao:/var/www/html/wp-content/plugins/BotaPressao
+  mysql:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: 59,,minion
